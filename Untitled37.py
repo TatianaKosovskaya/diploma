@@ -4,7 +4,9 @@
 # In[ ]:
 
 import streamlit as st
-import zipfile
-zf = zipfile.ZipFile('train_ver2.csv.zip')
-df = pd.read_csv(zf.open('train_ver2.csv'))
+import pandas as pd
+url='https://drive.google.com/file/d/1SnMOAOYZUJFR8hUhK58pOU3vLTRaRqvz/view?usp=share_link'
+path = 'https://drive.google.com/uc?export=download&id='+url.split('/')[-2]
+df = pd.read_csv(path)
+df.head()
 st.table(df.head())
