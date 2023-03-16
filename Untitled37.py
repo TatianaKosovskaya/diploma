@@ -16,6 +16,6 @@ import pandas as pd
 #st.table(df.head())
 
 #https://github.com/TatianaKosovskaya/diploma/blob/main/mushrooms.csv
-url='https://github.com/TatianaKosovskaya/diploma/blob/main/mushrooms.csv'
-df = pd.read_csv(url)
+#url='https://github.com/TatianaKosovskaya/diploma/blob/main/mushrooms.csv'
+df = pd.read_csv('mushrooms.csv')
 st.table(df.head())
