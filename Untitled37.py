@@ -4,9 +4,39 @@
 # In[ ]:
 
 import streamlit as st
+
+
+# Для манипулирования данными
+import numpy as np
 import pandas as pd
+from datetime import datetime
 
+# Для графиков
+import seaborn as sns
+import matplotlib.pyplot as plt
 
+# Для предварительной обработки данных
+from sklearn.preprocessing import LabelEncoder
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import IterativeImputer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# Модели машинного обучения, используемые для заполнения нулевых значений
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
+
+# Для визуализации итераций
+from tqdm import tqdm
+
+# Для чтения файлов и данных
+import os
+
+# Игнорировать предупреждения
+import warnings
+warnings.filterwarnings("ignore")
+
+# Настраиваем отображение максимального количества столбцов
+pd.set_option("display.max_columns",1000)
 # In[7]:
 
 
