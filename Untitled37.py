@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[ ]:
-
+!python -m pip install --upgrade pip
 import streamlit as st
 
 
