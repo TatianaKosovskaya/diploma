@@ -11,3 +11,4 @@ pyvis>=0.2.1
 seaborn>=0.12.2 
 scikit-learn>=1.2.2
 tqdm>=4.65.0
+zipfile>=0.0.7.0
