@@ -25,8 +25,16 @@ df_9 = pd.read_csv('train_df_9.csv')
 df_10 = pd.read_csv('train_df_10.csv')
 
 df_merged = df_1.append(df_2, ignore_index=True)
-st.table(df_merged.tail())
+#st.table(df_merged.tail())
 df_merged = df_merged.append(df_3, ignore_index=True)
+df_merged = df_merged.append(df_4, ignore_index=True)
+df_merged = df_merged.append(df_5, ignore_index=True)
+df_merged = df_merged.append(df_6, ignore_index=True)
+df_merged = df_merged.append(df_7, ignore_index=True)
+df_merged = df_merged.append(df_8, ignore_index=True)
+df_merged = df_merged.append(df_9, ignore_index=True)
+df_merged = df_merged.append(df_10, ignore_index=True)
+
 st.table(df_merged.head())
 st.table(df_merged.tail())
 
