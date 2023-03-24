@@ -5,7 +5,7 @@
 
 import streamlit as st
 import pandas as pd
-import os
+#import os
 
 df_1 = pd.read_csv('train_df_1.csv')
 st.table(df_1.head())
