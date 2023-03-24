@@ -16,4 +16,4 @@ st.table(df_2.head())
 df_merged = df_1.append(df_2, ignore_index=True)
 st.table(df_merged.head())
 st.table(df_merged.tail())
-st.table(df_merged)
+
