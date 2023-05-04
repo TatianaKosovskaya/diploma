@@ -23,7 +23,7 @@ st.table(data)
 
 # In[2]:
 
-
+'''
 import pandas as pd
 import numpy as np
 from datetime import datetime
@@ -1188,4 +1188,4 @@ data_2[data_2['Age'] == 22]
 # Получить результат для 174986.0 (возраст-22)
 res3 = get_sim_user_recommendation(174986.0, 24, user_data_reduced)
 res3
-
+'''
