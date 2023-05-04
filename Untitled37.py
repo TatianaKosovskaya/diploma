@@ -34,6 +34,9 @@ df_9 = pd.read_csv('train_df_9.csv')
 #df_19 = pd.read_csv('train_df_19.csv')
 #df_20 = pd.read_csv('train_df_20.csv')
 
+data = pd.concat([df_1, df_2, df_3, df_4, df_5, df_6, df_7, df_8, df_9, df_10], axis=0)
+st.table(data)
+
 df_merged = df_1.append(df_2, ignore_index=True)
 #st.table(df_merged.tail())
 df_merged = df_merged.append(df_3, ignore_index=True)
