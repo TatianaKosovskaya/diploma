@@ -131,10 +131,11 @@ def get_recommendation(uid,model):
     recommendations.sort_values("pred", ascending=False, inplace=True)
     recommendations.reset_index(drop=True, inplace=True)
     return recommendations
-#get_recommendation(15890,svd)
+
+#736
 
 #st.text(svd_results)
-st.table(get_recommendation(15890,svd).head())
+st.table(get_recommendation(15890,svd))
 
 st.text('Hi 5!')
 
