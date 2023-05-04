@@ -123,9 +123,18 @@ data = Dataset.load_from_df(user_item_ratio_stacked, reader=reader)
 trainset = data.build_full_trainset()
 svd = SVD()
 svd_results = cross_validate(algo=svd, data=data, cv=4)
+svd = SVD()
+svd.fit(trainset)
+def get_recommendation(uid,model):    
+    recommendations = [(uid, sid, data_desc[data_desc['Column Name'] == le.inverse_transform([sid])[0]]['Description'].values[0], model.predict(uid,sid).est) for sid in range(24)]
+    recommendations = pd.DataFrame(recommendations, columns=['uid', 'sid', 'service_name', 'pred'])
+    recommendations.sort_values("pred", ascending=False, inplace=True)
+    recommendations.reset_index(drop=True, inplace=True)
+    return recommendations
+#get_recommendation(15890,svd)
 
-st.text(svd_results)
-#st.table(user_item_ratio_stacked.head())
+#st.text(svd_results)
+st.table(get_recommendation(15890,svd).head())
 
 st.text('Hi 5!')
 
