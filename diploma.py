@@ -1,4 +1,4 @@
-'''
+
 import streamlit as st
 import pandas as pd
 
@@ -12,6 +12,8 @@ data_7 = pd.read_csv('train_df_7.csv')
 data_8 = pd.read_csv('train_df_8.csv')
 data_9 = pd.read_csv('train_df_9.csv')
 data_10 = pd.read_csv('train_df_10.csv')
+
+'''
 data = data_1.append(data_2, ignore_index=True)
 data = data.append(data_3, ignore_index=True)
 data = data.append(data_4, ignore_index=True)
@@ -21,9 +23,13 @@ data = data.append(data_7, ignore_index=True)
 data = data.append(data_8, ignore_index=True)
 data = data.append(data_9, ignore_index=True)
 data = data.append(data_10, ignore_index=True)
-st.table(data)
 '''
 
+data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10], axis=0)
+
+st.table(data)
+
+'''
 import streamlit as st
 import pandas as pd
 #import os
@@ -61,3 +67,4 @@ st.table(df_merged.head())
 st.table(df_merged.tail())
 st.table(df_merged)
 st.text('Hi!')
+'''
