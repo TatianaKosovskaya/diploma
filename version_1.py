@@ -114,15 +114,18 @@ user_item_ratio_stacked.drop(user_item_ratio_stacked[user_item_ratio_stacked['se
 user_item_ratio_stacked.reset_index(drop=True, inplace=True)
 
 
-st.table(user_item_ratio_stacked.head())
+#st.table(user_item_ratio_stacked.head())
 
-st.text('Hi 6!')
+st.text('Hi 5!')
 
-'''
+
 import surprise
 from surprise import Dataset, Reader
 from surprise.prediction_algorithms.matrix_factorization import SVD
 from surprise.model_selection import cross_validate
 from surprise import accuracy
 from surprise.prediction_algorithms.knns import KNNBasic
-'''
+
+
+st.text('Hi 6!')
+
