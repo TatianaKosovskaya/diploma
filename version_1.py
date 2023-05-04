@@ -92,8 +92,14 @@ raw_target = data_2.iloc[:, 22:].idxmax(1)
 transformed_target = le.fit_transform(raw_target)
 data_2['service_opted'] = transformed_target
 data_2['service_opted'] = data_2['service_opted'].astype('uint8')
+names = raw_target.value_counts().index
+values = raw_target.value_counts().values
+names = [data_desc[data_desc['Column Name'] == name]['Description'].values[0] for name in names]
+user_item_matrix = pd.crosstab(index=data_2.Code, columns=le.transform(raw_target), values=1, aggfunc='sum')
+user_item_matrix.fillna(0, inplace=True)
+st.table(user_item_matrix.head())
 
-st.text('Hi 6!')
+st.text('Hi 5!')
 
 '''
 import surprise
