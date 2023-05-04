@@ -108,10 +108,15 @@ user_item_ratio_stacked = user_item_ratio_matrix.stack().to_frame()
 user_item_ratio_stacked['ncodpers'] = [index[0] for index in user_item_ratio_stacked.index]
 user_item_ratio_stacked['service_opted'] = [index[1] for index in user_item_ratio_stacked.index]
 user_item_ratio_stacked.reset_index(drop=True, inplace=True)
+user_item_ratio_stacked.rename(columns={0:"service_selection_ratio"}, inplace=True)
+user_item_ratio_stacked = user_item_ratio_stacked[['ncodpers','service_opted', 'service_selection_ratio']]
+user_item_ratio_stacked.drop(user_item_ratio_stacked[user_item_ratio_stacked['service_selection_ratio']==0].index, inplace=True)
+user_item_ratio_stacked.reset_index(drop=True, inplace=True)
+
 
 st.table(user_item_ratio_stacked.head())
 
-st.text('Hi 5!')
+st.text('Hi 6!')
 
 '''
 import surprise
