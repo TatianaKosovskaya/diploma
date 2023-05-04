@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
+import streamlit as st
+import pandas as pd
+
 data_1 = pd.read_csv('train_df_1.csv')
 data_2 = pd.read_csv('train_df_2.csv')
 data_3 = pd.read_csv('train_df_3.csv')
