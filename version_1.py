@@ -102,10 +102,14 @@ for row,item in tqdm(enumerate(uim_arr)):
     for column,item_value in enumerate(item):
         uim_arr[row, column] = uim_arr[row, column] / sum(item)
 user_item_ratio_matrix = pd.DataFrame(uim_arr, columns=user_item_matrix.columns, index=user_item_matrix.index)
+user_item_ratio_stacked = user_item_ratio_matrix.stack().to_frame()
+user_item_ratio_stacked['ncodpers'] = [index[0] for index in user_item_ratio_stacked.index]
+user_item_ratio_stacked['service_opted'] = [index[1] for index in user_item_ratio_stacked.index]
+user_item_ratio_stacked.reset_index(drop=True, inplace=True)
 
-st.table(user_item_ratio_matrix.head())
+st.table(user_item_ratio_stacked.head())
 
-st.text('Hi 6!')
+st.text('Hi 5!')
 
 '''
 import surprise
