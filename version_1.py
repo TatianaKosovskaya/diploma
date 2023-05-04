@@ -87,6 +87,12 @@ data_2['Customer type'].replace('None',np.nan, inplace=True)
 
 st.table(data_2.head())
 
+le = LabelEncoder()
+raw_target = data_2.iloc[:, 22:].idxmax(1)
+transformed_target = le.fit_transform(raw_target)
+data_2['service_opted'] = transformed_target
+data_2['service_opted'] = data_2['service_opted'].astype('uint8')
+
 st.text('Hi 5!')
 
 '''
