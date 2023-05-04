@@ -44,6 +44,50 @@ st.table(data.tail())
 
 st.text('Hi 4!')
 
+data.drop('Unnamed: 0', axis= 1 , inplace= True )
+data.rename( columns={'Derivada account':'Derivative account'}, inplace=True )
+l = list(data.columns)
+data_desc = pd.read_csv('data_desc.csv')
+data_desc['Column Name'] = l
+data_2 = data.copy()
+data_2 = data_2[data_2['Employee index'].notna()]
+data_2 = data_2[data_2['Country residence'].notna()]
+data_2 = data_2[data_2['Sex'].notna()]
+data_2 = data_2[data_2['Index'].notna()]
+data_2 = data_2[data_2['Index real'].notna()]
+data_2 = data_2[data_2['Residence index'].notna()]
+data_2 = data_2[data_2['Foreigner index'].notna()]
+data_2 = data_2[data_2['Deceased index'].notna()]
+data_2 = data_2[data_2['Province code'].notna()]
+data_2 = data_2[data_2['Province name'].notna()]
+data_2 = data_2[data_2['Activity index'].notna()]
+data_2 = data_2[data_2['Payroll'].notna()]
+data_2 = data_2[data_2['Real pensions'].notna()]
+data_2.drop(columns=['Last date as primary customer','Spouse index'], inplace=True)
+data_2['Gross income of the household'] = data_2['Gross income of the household'].fillna(134245.63)
+data_2['Customer type'] = data_2['Customer type'].fillna(1)
+data_2['Customer relation type'] = data_2['Customer relation type'].fillna('I')
+data_2['Channel index'] = data_2['Channel index'].fillna('KHE')
+data_2['Segmentation index'] = data_2['Segmentation index'].fillna('02 - PARTICULARES')
+data_2[['Age', 'Seniority (in months)']] = data_2[['Age', 'Seniority (in months)']].astype(int)
+data_2 = data_2[data_2["Age"] <= 100]
+data_2 = data_2[data_2["Age"] >= 18]
+data_2 = data_2[data_2["Seniority (in months)"] != -999999]
+# Исправление категорий столбца - indrel_1mes
+data_2['Customer type'].replace('1', 1, inplace=True)
+data_2['Customer type'].replace('1.0', 1, inplace=True)
+data_2['Customer type'].replace('2', 2, inplace=True)
+data_2['Customer type'].replace('2.0', 2, inplace=True)
+data_2['Customer type'].replace('3', 3, inplace=True)
+data_2['Customer type'].replace('3.0', 3, inplace=True)
+data_2['Customer type'].replace('4', 4, inplace=True)
+data_2['Customer type'].replace('4.0', 4, inplace=True)
+data_2['Customer type'].replace('P', 5, inplace=True)
+data_2['Customer type'].replace('None',np.nan, inplace=True)
+
+st.table(data_2.head())
+
+st.text('Hi 5!')
 
 '''
 import surprise
