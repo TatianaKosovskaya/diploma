@@ -1,7 +1,8 @@
 
+import streamlit as st
+
 st.text('Hi_!')
 
-import streamlit as st
 import numpy as np
 from datetime import datetime
 import seaborn as sns
