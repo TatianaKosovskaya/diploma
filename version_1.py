@@ -97,9 +97,15 @@ values = raw_target.value_counts().values
 names = [data_desc[data_desc['Column Name'] == name]['Description'].values[0] for name in names]
 user_item_matrix = pd.crosstab(index=data_2.Code, columns=le.transform(raw_target), values=1, aggfunc='sum')
 user_item_matrix.fillna(0, inplace=True)
-st.table(user_item_matrix.head())
+uim_arr = np.array(user_item_matrix)
+for row,item in tqdm(enumerate(uim_arr)):
+    for column,item_value in enumerate(item):
+        uim_arr[row, column] = uim_arr[row, column] / sum(item)
+user_item_ratio_matrix = pd.DataFrame(uim_arr, columns=user_item_matrix.columns, index=user_item_matrix.index)
 
-st.text('Hi 5!')
+st.table(user_item_ratio_matrix.head())
+
+st.text('Hi 6!')
 
 '''
 import surprise
