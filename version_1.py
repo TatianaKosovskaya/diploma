@@ -1,6 +1,29 @@
 
+st.text('Hi_!')
+
 import streamlit as st
-import pandas as pd
+import numpy as np
+from datetime import datetime
+import seaborn as sns
+from sklearn.preprocessing import LabelEncoder
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import IterativeImputer
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
+from tqdm import tqdm
+#import os
+import warnings
+warnings.filterwarnings("ignore")
+import surprise
+from surprise import Dataset, Reader
+from surprise.prediction_algorithms.matrix_factorization import SVD
+from surprise.model_selection import cross_validate
+from surprise import accuracy
+from surprise.prediction_algorithms.knns import KNNBasic
+from sklearn.preprocessing import StandardScaler
+from numpy import dot
+from numpy.linalg import norm
 
 st.text('Hi!')
 
@@ -24,3 +47,4 @@ st.text('Hi 3!')
 st.table(data.tail())
 
 st.text('Hi 4!')
+
