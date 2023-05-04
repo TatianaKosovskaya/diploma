@@ -14,3 +14,6 @@ st.table(data_2.head())
 
 st.text('Hi 3!')
 
+data = pd.concat([data_1, data_2], axis=0, ignore_index=True)
+
+st.text('Hi 4!')
