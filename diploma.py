@@ -25,7 +25,7 @@ data = data.append(data_9, ignore_index=True)
 data = data.append(data_10, ignore_index=True)
 '''
 
-data = pd.concat([data_1, data_2], axis=0)
+data = pd.concat([data_1, data_2], axis=0, ignore_index=True)
 
 st.table(data)
 
