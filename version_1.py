@@ -20,6 +20,12 @@ warnings.filterwarnings("ignore")
 from sklearn.preprocessing import StandardScaler
 from numpy import dot
 from numpy.linalg import norm
+import surprise
+from surprise import Dataset, Reader
+from surprise.prediction_algorithms.matrix_factorization import SVD
+from surprise.model_selection import cross_validate
+from surprise import accuracy
+from surprise.prediction_algorithms.knns import KNNBasic
 
 st.text('Hi!')
 
@@ -112,20 +118,14 @@ user_item_ratio_stacked.rename(columns={0:"service_selection_ratio"}, inplace=Tr
 user_item_ratio_stacked = user_item_ratio_stacked[['ncodpers','service_opted', 'service_selection_ratio']]
 user_item_ratio_stacked.drop(user_item_ratio_stacked[user_item_ratio_stacked['service_selection_ratio']==0].index, inplace=True)
 user_item_ratio_stacked.reset_index(drop=True, inplace=True)
+reader = Reader(line_format='user item rating', sep=',', rating_scale=(0,1), skip_lines=1)
+data = Dataset.load_from_df(user_item_ratio_stacked, reader=reader)
+trainset = data.build_full_trainset()
+svd = SVD()
+svd_results = cross_validate(algo=svd, data=data, cv=4)
 
-
+st.text(svd_results)
 #st.table(user_item_ratio_stacked.head())
 
 st.text('Hi 5!')
-
-
-import surprise
-from surprise import Dataset, Reader
-from surprise.prediction_algorithms.matrix_factorization import SVD
-from surprise.model_selection import cross_validate
-from surprise import accuracy
-from surprise.prediction_algorithms.knns import KNNBasic
-
-
-st.text('Hi 6!')
 
