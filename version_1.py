@@ -17,3 +17,7 @@ st.text('Hi 3!')
 data = pd.concat([data_1, data_2], axis=0, ignore_index=True)
 
 st.text('Hi 4!')
+
+st.table(data.tail())
+
+st.text('Hi 5!')
