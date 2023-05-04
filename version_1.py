@@ -16,12 +16,6 @@ from tqdm import tqdm
 #import os
 import warnings
 warnings.filterwarnings("ignore")
-import surprise
-from surprise import Dataset, Reader
-from surprise.prediction_algorithms.matrix_factorization import SVD
-from surprise.model_selection import cross_validate
-from surprise import accuracy
-from surprise.prediction_algorithms.knns import KNNBasic
 from sklearn.preprocessing import StandardScaler
 from numpy import dot
 from numpy.linalg import norm
@@ -49,3 +43,12 @@ st.table(data.tail())
 
 st.text('Hi 4!')
 
+
+'''
+import surprise
+from surprise import Dataset, Reader
+from surprise.prediction_algorithms.matrix_factorization import SVD
+from surprise.model_selection import cross_validate
+from surprise import accuracy
+from surprise.prediction_algorithms.knns import KNNBasic
+'''
