@@ -93,7 +93,7 @@ transformed_target = le.fit_transform(raw_target)
 data_2['service_opted'] = transformed_target
 data_2['service_opted'] = data_2['service_opted'].astype('uint8')
 
-st.text('Hi 5!')
+st.text('Hi 6!')
 
 '''
 import surprise
