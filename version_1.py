@@ -146,9 +146,13 @@ reader = Reader(line_format='user item rating', sep=',', rating_scale=(0,1), ski
 data_reduced = Dataset.load_from_df(user_item_ratio_stacked_reduced, reader=reader)
 trainset_reduced = data_reduced.build_full_trainset()
 
-#sim_options = {'name': 'cosine', 'user_based': True}
-#sim_user = KNNBasic(sim_options=sim_options, verbose=True, random_state=11)
-#sim_user_results = cross_validate(algo=sim_user, data=data_reduced)
+
+sim_options = {'name': 'cosine', 'user_based': True}
+sim_user = KNNBasic(sim_options=sim_options, verbose=True, random_state=11)
+sim_user_results = cross_validate(algo=sim_user, data=data_reduced)
+
+st.text(sim_user_results)
+
 
 sim_options = {'name': 'cosine', 'user_based': True}
 sim_user = KNNBasic(sim_options=sim_options, verbose=False, random_state=33)
