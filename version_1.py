@@ -147,11 +147,11 @@ data_reduced = Dataset.load_from_df(user_item_ratio_stacked_reduced, reader=read
 trainset_reduced = data_reduced.build_full_trainset()
 
 
-sim_options = {'name': 'cosine', 'user_based': True}
-sim_user = KNNBasic(sim_options=sim_options, verbose=True, random_state=11)
-sim_user_results = cross_validate(algo=sim_user, data=data_reduced)
+#sim_options = {'name': 'cosine', 'user_based': True}
+#sim_user = KNNBasic(sim_options=sim_options, verbose=True, random_state=11)
+#sim_user_results = cross_validate(algo=sim_user, data=data_reduced)
 
-st.text(sim_user_results)
+#st.text(sim_user_results)
 
 
 sim_options = {'name': 'cosine', 'user_based': True}
@@ -162,10 +162,13 @@ sim_options = {'name': 'cosine', 'user_based': False}
 sim_item = KNNBasic(sim_options=sim_options, verbose=False, random_state=33)
 sim_item_results = cross_validate(algo=sim_item, data=data, cv=4)
 
+sim_options = {'name': 'cosine', 'user_based': False}
+sim_item = KNNBasic(sim_options=sim_options, verbose=False, random_state=33)
+sim_item.fit(trainset)
 
 
-st.text(sim_item_results)
-#st.table(get_recommendation(uid=15890,model=sim_user))
+#st.text(sim_item_results)
+st.table(get_recommendation(15890, sim_item))
 
 st.text('Hi 5!')
 
