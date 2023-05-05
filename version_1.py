@@ -176,10 +176,19 @@ for col in tqdm(cols_to_encode):
     label_encoders.append(lab_enc)
     del lab_enc
     
+data_2.drop(columns=['Province name'], inplace=True)
+data_2.drop(columns=['Addres type'], inplace=True)
+
+user_data = data_2[~data_2['Code'].duplicated(keep='last')]
+user_data.reset_index(drop=True, inplace=True)
+
+service_one_hot = pd.get_dummies(user_data['service_opted'],prefix='service')
+user_data = pd.concat([user_data, service_one_hot], axis=1)
+
 
 
 #st.text(sim_item_results)
-st.table(data_2.head())
+st.table(user_data.head())
 
 st.text('Hi 5!')
 
