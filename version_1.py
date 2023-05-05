@@ -154,10 +154,14 @@ sim_options = {'name': 'cosine', 'user_based': True}
 sim_user = KNNBasic(sim_options=sim_options, verbose=False, random_state=33)
 sim_user.fit(trainset_reduced)
 
+sim_options = {'name': 'cosine', 'user_based': False}
+sim_item = KNNBasic(sim_options=sim_options, verbose=False, random_state=33)
+sim_item_results = cross_validate(algo=sim_item, data=data, cv=4)
 
 
-#st.text(svd_results)
-st.table(get_recommendation(uid=15890,model=sim_user))
 
-st.text('Hi 6!')
+st.text(sim_item_results)
+#st.table(get_recommendation(uid=15890,model=sim_user))
+
+st.text('Hi 5!')
 
