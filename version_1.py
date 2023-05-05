@@ -166,9 +166,20 @@ sim_options = {'name': 'cosine', 'user_based': False}
 sim_item = KNNBasic(sim_options=sim_options, verbose=False, random_state=33)
 sim_item.fit(trainset)
 
+cols_to_encode = ['Employee index', 'Country residence', 'Sex', 'Index real', 'Customer relation type', 'Residence index', 
+                  'Foreigner index', 'Channel index', 'Deceased index', 'Segmentation index']
+label_encoders = []
+for col in tqdm(cols_to_encode):
+    lab_enc = LabelEncoder()
+    data_2[col] = lab_enc.fit_transform(data_2[col])
+    data_2[col] = data_2[col].astype('uint8')
+    label_encoders.append(lab_enc)
+    del lab_enc
+    
+
 
 #st.text(sim_item_results)
-st.table(get_recommendation(15890, sim_item))
+st.table(data_2.head())
 
 st.text('Hi 5!')
 
