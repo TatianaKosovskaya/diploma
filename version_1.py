@@ -132,10 +132,19 @@ def get_recommendation(uid,model):
     recommendations.reset_index(drop=True, inplace=True)
     return recommendations
 
-#736
+user_to_remove = []
+for index, row in tqdm(enumerate(user_item_matrix.values)):
+    non_zeroes = np.count_nonzero(row)
+    if non_zeroes < 3:
+        user_to_remove.append(user_item_matrix.index[index])
+        
+user_to_remove = user_item_ratio_stacked[user_item_ratio_stacked['ncodpers'].isin(user_to_remove)].index
+user_item_ratio_stacked_reduced = user_item_ratio_stacked.drop(user_to_remove, axis=0, inplace=False)
+print(user_item_ratio_stacked_reduced.shape)
+
 
 #st.text(svd_results)
-st.table(get_recommendation(15890,svd))
+st.table(user_item_ratio_stacked_reduced.head())
 
 st.text('Hi 5!')
 
