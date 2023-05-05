@@ -142,9 +142,18 @@ user_to_remove = user_item_ratio_stacked[user_item_ratio_stacked['ncodpers'].isi
 user_item_ratio_stacked_reduced = user_item_ratio_stacked.drop(user_to_remove, axis=0, inplace=False)
 print(user_item_ratio_stacked_reduced.shape)
 
+reader = Reader(line_format='user item rating', sep=',', rating_scale=(0,1), skip_lines=1)
+data_reduced = Dataset.load_from_df(user_item_ratio_stacked_reduced, reader=reader)
+trainset_reduced = data_reduced.build_full_trainset()
+
+sim_options = {'name': 'cosine', 'user_based': True}
+sim_user = KNNBasic(sim_options=sim_options, verbose=True, random_state=11)
+sim_user_results = cross_validate(algo=sim_user, data=data_reduced, cv=4)
+
+
 
 #st.text(svd_results)
-st.table(user_item_ratio_stacked_reduced.head())
+st.table(sim_user_results)
 
-st.text('Hi 6!')
+st.text('Hi 5!')
 
