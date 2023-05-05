@@ -146,5 +146,5 @@ print(user_item_ratio_stacked_reduced.shape)
 #st.text(svd_results)
 st.table(user_item_ratio_stacked_reduced.head())
 
-st.text('Hi 5!')
+st.text('Hi 6!')
 
