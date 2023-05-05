@@ -185,6 +185,19 @@ user_data.reset_index(drop=True, inplace=True)
 service_one_hot = pd.get_dummies(user_data['service_opted'],prefix='service')
 user_data = pd.concat([user_data, service_one_hot], axis=1)
 
+data_2.set_index(['Code','service_opted'], inplace=True)
+data_2.sort_index(inplace=True)
+
+service_list = [i for i in range(24)]
+for service_no in tqdm(service_list):
+    for index, row in tqdm(enumerate(user_data.itertuples())):
+        try:
+            old_service_no_count = data_2.loc[(row.Code, service_no)].shape[0]
+        except:
+            old_service_no_count = 0
+        finally:
+            user_data.at[index, f'service_{service_no}'] = old_service_no_count
+
 
 
 #st.text(sim_item_results)
