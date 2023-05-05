@@ -148,7 +148,7 @@ trainset_reduced = data_reduced.build_full_trainset()
 
 sim_options = {'name': 'cosine', 'user_based': True}
 sim_user = KNNBasic(sim_options=sim_options, verbose=True, random_state=11)
-sim_user_results = cross_validate(algo=sim_user, data=data_reduced, cv=4)
+sim_user_results = cross_validate(algo=sim_user, data=data_reduced)
 
 
 
