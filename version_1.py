@@ -43,7 +43,9 @@ data_1 = pd.read_csv('train_df_1.csv')
 st.text('Hi 2!')
 
 data = data_1
+st.text(data.shape)
 
+'''
 #data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10], axis=0, ignore_index=True)
 
 st.text('Hi 3!')
@@ -204,4 +206,4 @@ for service_no in tqdm(service_list):
 st.table(user_data.head())
 
 st.text('Hi 5!')
-
+'''
