@@ -42,7 +42,7 @@ data_1 = pd.read_csv('train_df_1.csv')
 
 st.text('Hi 2!')
 
-data = data_1
+data = data_1[:100000]
 st.text(data.shape)
 
 '''
