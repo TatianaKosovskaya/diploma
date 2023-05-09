@@ -162,9 +162,9 @@ if click:
             d = d['service_name']
             d = d[:5]
             d = list(d)
-            st.title('Recommended products:')
+            st.header('Recommended products:')
             for i in range(len(d)):
-                st.header(str(i + 1), ". ", d[i])
+                st.subheader(str(i + 1), ". ", d[i])
                 st.caption('Вид обязательственных отношений, договор, согласно')
                     
             #st.table(get_recommendation(9999999,svd))
