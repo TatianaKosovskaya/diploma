@@ -167,6 +167,42 @@ if click:
             for i in range(len(d)):
                 st.write(str(i + 1), ". ", d[i])
                 
+
+0	Guarantees
+1	Pensions
+2	Loans
+3	Pensions
+4	particular Plus Account
+5	Home Account
+6	particular Account
+7	Saving Account
+8	Current Accounts
+9	Securities
+10	Funds
+11	Más particular Account
+12	Payroll Account
+13	Mortgage
+14	Taxes
+15	e-account
+16	Medium-term deposits
+17	Long-term deposits
+18	Credit Card
+19	Junior Account
+20	Short-term deposits
+21	Derivada Account
+22	Direct Debit
+23	Payroll
+                
+                
+
+17	
+19	
+20	
+21	
+22	
+23	
+                
+                
                 if d[i] == 'Saving Account':
                     st.caption('A saving account is a type of banking product that allows customers to deposit and withdraw funds, while earning interest on their balance. These accounts typically have lower interest rates compared to other investment options, but they also offer more liquidity and flexibility. Saving accounts can be opened by individuals, as well as joint accounts for couples, families, or businesses. Some saving accounts may require a minimum deposit to open, and may have minimum balance requirements to avoid fees. Overall, saving accounts are a popular and convenient option for customers looking to earn some interest on their savings while still maintaining easy access to their funds.')
                 if d[i] == 'Home Account':
@@ -191,30 +227,30 @@ if click:
                     st.caption('A banking product for customer pensions is designed to help individuals save money for their retirement years. Pensions are long-term savings plans that allow customers to contribute money on a regular basis, with the funds accumulating over time. These products offer various investment options, such as stocks, bonds, and mutual funds, which can help customers grow their savings over the years. Additionally, some pension products may offer tax benefits or employer contributions to help customers save even more. When a customer reaches retirement age, they can begin to withdraw their savings as a source of income in their retirement years.')
                 if d[i] == 'Credit Card':
                     st.caption('A credit card is a banking product that allows customers to borrow funds up to a pre-set credit limit to make purchases or withdraw cash. Customers are required to pay back the borrowed funds along with interest charges and other fees within a billing cycle. Credit cards offer various benefits, such as cashback rewards, discounts, and travel perks. They also provide a convenient and secure way to make purchases both online and offline. Credit card issuers may charge annual fees, transaction fees, balance transfer fees, and other charges, so it is essential to read and understand the terms and conditions before applying for a credit card.')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
-                if d[i] == 'Saving Account':
-                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Guarantees':
+                    st.caption('In banking, a guarantee is a promise made by the bank to a third party that a customer will fulfill their obligations. The most common type of guarantee is a letter of guarantee, which is often used to support a business transaction or project. A letter of guarantee acts as a formal assurance that the bank will cover the cost of the transaction if the customer is unable to fulfill their obligations. The bank may require the customer to provide collateral or a security deposit to cover the cost of the guarantee. Guarantees can be useful for businesses looking to secure contracts or funding, and for individuals who need to provide assurance to landlords or other creditors. However, it is important to understand the terms and conditions of the guarantee, as failure to meet the obligations can result in significant financial consequences.')
+                if d[i] == 'Más particular Account':
+                    st.caption('The Más particular account is a banking product offered to customers by some financial institutions. It is a premium current account that offers exclusive benefits such as discounts on products and services, personalized attention, and higher transaction limits. This type of account is usually designed for high net worth individuals or those with significant financial resources. In addition to the standard features of a current account, a Más particular account may also offer features such as concierge services, travel insurance, and access to VIP lounges. Some institutions may also offer investment and wealth management services to customers with a Más particular account.')
+                if d[i] == 'Payroll Account':
+                    st.caption('A payroll account is a banking product that is specifically designed for employees to receive their salaries from their employer. The account is linked to the employer's payroll system, allowing for direct deposit of the employee's salary into the account. It often comes with various benefits such as low fees or no fees, access to online banking services, and the ability to set up automatic bill payments or savings plans. Some payroll accounts may also offer additional features like cashback rewards or other perks. As a result, a payroll account can be a convenient and cost-effective way for employees to receive their salary and manage their finances.')
+                if d[i] == 'Mortgage':
+                    st.caption('A mortgage is a type of loan that is used to purchase a property, typically a home or a piece of land. The borrower, usually the homebuyer, receives a lump sum of money from the bank or lender and agrees to pay back the loan with interest over a set period of time, usually 15-30 years. The property acts as collateral for the loan, meaning that if the borrower fails to make payments, the lender can take possession of the property. Mortgages come with a variety of terms and conditions, such as fixed or adjustable interest rates, down payment requirements, and prepayment penalties. They are a popular banking product for customers looking to purchase a home or invest in real estate.')
+                if d[i] == 'Taxes':
+                    st.caption('Banks offer various products and services to assist customers with their tax-related matters. For instance, some banks provide tax payment services that allow customers to pay their taxes directly from their bank accounts. This service simplifies the tax payment process and ensures timely and accurate tax payments. Moreover, some banks offer tax refund anticipation loans to their customers. These loans provide customers with access to their expected tax refund in advance, which can be beneficial for those who need the funds immediately. The bank provides the loan, and when the customer tax refund arrives, the loan is repaid. Banks may also provide tax planning services to help customers manage their finances and reduce their tax liabilities. These services may include investment advice, retirement planning, and other financial planning services. Overall, banking products related to taxes can be helpful for customers to manage their finances and meet their tax obligations efficiently.')
+                if d[i] == 'e-account':
+                    st.caption('An e-account is a digital banking product that allows customers to access their accounts and manage their finances online. With an e-account, customers can check their account balances, view transaction history, transfer funds, pay bills, and receive electronic statements. E-accounts often offer additional features such as mobile banking apps and online customer support. This banking product is convenient for customers who prefer to manage their finances electronically and want to avoid visiting physical bank branches.')
+                if d[i] == 'Long-term deposits':
+                    st.caption('Long-term deposits are a type of banking product that allows customers to invest their money for a set period of time, usually ranging from one to ten years. These deposits typically offer higher interest rates than regular savings accounts, making them an attractive option for customers who want to earn more interest on their savings. However, long-term deposits usually require a minimum deposit amount and may impose penalties for early withdrawal. Customers can choose between fixed-rate deposits, where the interest rate remains the same for the entire term, or variable-rate deposits, where the interest rate may change based on market conditions. Long-term deposits are often used by customers who have long-term financial goals, such as saving for retirement or a child education.')
+                if d[i] == 'Junior Account':
+                    st.caption('A junior account is a type of banking product designed for children and teenagers under 18 years of age. It provides a safe and secure way for young people to save and manage their money while teaching them important financial skills. Junior accounts typically offer low or no fees, competitive interest rates, and access to online banking and mobile apps. They may also offer additional features such as parental controls, spending limits, and educational resources to help young account holders learn about budgeting and saving. Junior accounts can be opened by parents or legal guardians on behalf of the child and may require documentation such as birth certificates or social security numbers.')
+                if d[i] == 'Short-term deposits':
+                    st.caption('A short-term deposit account is a banking product that allows customers to earn interest on a sum of money that is deposited for a fixed period of time, usually less than one year. These accounts are ideal for customers who want to earn a higher interest rate than a traditional savings account, but do not want to commit their money to a long-term investment. Interest rates for short-term deposits are usually fixed and can vary depending on the amount of money deposited and the length of the term. Once the term has ended, customers can choose to withdraw their funds or roll them over into a new deposit account. Short-term deposit accounts are often used for short-term savings goals such as holidays, weddings, or home renovations.')
+                if d[i] == 'Derivada Account':
+                    st.caption('A derivative account is a banking product that enables customers to invest in various financial instruments, such as futures contracts, options, swaps, and other similar products. These products derive their value from an underlying asset or financial index. The goal of the derivative account is to provide customers with the opportunity to manage risk and maximize profits through investments in these complex financial products. Derivative accounts may be suitable for experienced investors who are looking for higher risk and higher reward opportunities. It is important to note that investing in derivatives can be risky and requires a thorough understanding of the product before investing.')
+                if d[i] == 'Direct Debit':
+                    st.caption('Direct Debit is a banking service that allows customers to authorize regular payments to a merchant or service provider from their bank account. This payment method is commonly used for recurring expenses such as utility bills, rent, or subscription services. Once the authorization is set up, the payment is automatically deducted from the customer account on a specified date, eliminating the need to remember to make the payment manually. Direct Debit offers convenience for customers and can help to ensure timely payments while reducing the risk of missed payments and associated late fees.')
+                if d[i] == 'Payroll':
+                    st.caption('A payroll service is a banking product that allows employers to process payroll for their employees efficiently. With this service, employers can pay their employees via direct deposit, make payments to the government for payroll taxes, and generate payroll reports. The service is often integrated with accounting software, which simplifies the process of keeping track of payroll expenses and generating financial statements. Payroll services can be used by businesses of all sizes, and they are especially useful for small and medium-sized enterprises that may not have dedicated human resources or accounting departments.')
                 
                     
             #st.table(get_recommendation(9999999,svd))
