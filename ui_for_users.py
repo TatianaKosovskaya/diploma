@@ -1,7 +1,14 @@
 
 import streamlit as st
 
-st.text('Hi_!')
+with header:
+    st.header("Recommendation System for Clients")
+    
+    st.markdown('''
+    Below is a possible user interface for bank customers recommending new banking products based on collaborative filtering.
+                    ''')
+
+    st.write("**Please select the product you own.**")
 
 import pandas as pd
 import numpy as np
@@ -27,8 +34,6 @@ from surprise.model_selection import cross_validate
 from surprise import accuracy
 from surprise.prediction_algorithms.knns import KNNBasic
 
-st.text('Hi!')
-
 data_1 = pd.read_csv('train_df_1.csv')
 #data_2 = pd.read_csv('train_df_2.csv')
 #data_3 = pd.read_csv('train_df_3.csv')
@@ -40,17 +45,9 @@ data_1 = pd.read_csv('train_df_1.csv')
 #data_9 = pd.read_csv('train_df_9.csv')
 #data_10 = pd.read_csv('train_df_10.csv')
 
-st.text('Hi 2!')
-
 data=data_1
 
 #data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10], axis=0, ignore_index=True)
-
-st.text('Hi 3!')
-
-st.table(data.tail())
-
-st.text('Hi 4!')
 
 data.drop('Unnamed: 0', axis= 1 , inplace= True )
 data.rename( columns={'Derivada account':'Derivative account'}, inplace=True )
@@ -92,8 +89,6 @@ data_2['Customer type'].replace('4', 4, inplace=True)
 data_2['Customer type'].replace('4.0', 4, inplace=True)
 data_2['Customer type'].replace('P', 5, inplace=True)
 data_2['Customer type'].replace('None',np.nan, inplace=True)
-
-st.table(data_2.head())
 
 le = LabelEncoder()
 raw_target = data_2.iloc[:, 22:].idxmax(1)
