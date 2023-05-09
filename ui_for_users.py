@@ -51,7 +51,7 @@ data=data_1
 col1, col2 = st.columns(2)
 
 product_list = list(data.columns)
-id = 999999.int()
+id = 999999
 product_list = product_list[25:]
 
 with col1:
