@@ -53,7 +53,7 @@ col1, col2 = st.columns(2)
 
 product_list = list(data.columns)
 id = 999999
-product_list = product_list[25:]
+product_list = product_list[24:]
 
 with col1:
     arr1 = [ (1 if (st.radio(str(product_list[i]), ['Not Owns', 'Owns'], horizontal=True, index=0)) == 'Owns' else 0) for i in range(0,12)]
