@@ -50,7 +50,7 @@ data=data_1
 
 col1, col2 = st.columns(2)
 
-product_list = [product for product in list(data.columns).values()]
+product_list = list(data.columns)
 
 
 with col1:
