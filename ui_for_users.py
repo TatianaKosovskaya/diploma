@@ -158,5 +158,8 @@ if click:
                 recommendations.reset_index(drop=True, inplace=True)
                 return recommendations
 
+            d = get_recommendation(9999999,svd)
+            st.table(d)
+            st.write('Recommended products:')
             st.table(get_recommendation(9999999,svd))
 
