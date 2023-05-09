@@ -42,7 +42,7 @@ data_1 = pd.read_csv('train_df_1.csv')
 
 st.text('Hi 2!')
 
-data = data_1[:100000]
+data = data_1
 
 #data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10], axis=0, ignore_index=True)
 
@@ -132,6 +132,7 @@ def get_recommendation(uid,model):
     recommendations.reset_index(drop=True, inplace=True)
     return recommendations
 
+'''
 user_to_remove = []
 for index, row in tqdm(enumerate(user_item_matrix.values)):
     non_zeroes = np.count_nonzero(row)
@@ -204,4 +205,4 @@ for service_no in tqdm(service_list):
 st.table(user_data.head())
 
 st.text('Hi 5!')
-
+'''
