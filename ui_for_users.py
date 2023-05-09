@@ -1,6 +1,7 @@
 
 import streamlit as st
 
+header = st.container()
 with header:
     st.header("Recommendation System for Clients")
     
