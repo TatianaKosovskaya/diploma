@@ -50,7 +50,8 @@ data=data_1
 
 col1, col2 = st.columns(2)
 
-product_list = list(data[25:].columns)
+product_list = list(data.columns)
+product_list = product_list[25:]
 st.table(product_list)
 
 with col1:
