@@ -167,42 +167,6 @@ if click:
             for i in range(len(d)):
                 st.write(str(i + 1), ". ", d[i])
                 
-
-0	Guarantees
-1	Pensions
-2	Loans
-3	Pensions
-4	particular Plus Account
-5	Home Account
-6	particular Account
-7	Saving Account
-8	Current Accounts
-9	Securities
-10	Funds
-11	Más particular Account
-12	Payroll Account
-13	Mortgage
-14	Taxes
-15	e-account
-16	Medium-term deposits
-17	Long-term deposits
-18	Credit Card
-19	Junior Account
-20	Short-term deposits
-21	Derivada Account
-22	Direct Debit
-23	Payroll
-                
-                
-
-17	
-19	
-20	
-21	
-22	
-23	
-                
-                
                 if d[i] == 'Saving Account':
                     st.caption('A saving account is a type of banking product that allows customers to deposit and withdraw funds, while earning interest on their balance. These accounts typically have lower interest rates compared to other investment options, but they also offer more liquidity and flexibility. Saving accounts can be opened by individuals, as well as joint accounts for couples, families, or businesses. Some saving accounts may require a minimum deposit to open, and may have minimum balance requirements to avoid fees. Overall, saving accounts are a popular and convenient option for customers looking to earn some interest on their savings while still maintaining easy access to their funds.')
                 if d[i] == 'Home Account':
