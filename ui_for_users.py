@@ -159,8 +159,10 @@ if click:
                 return recommendations
 
             d = get_recommendation(9999999,svd)
-            d = d['service_name']
-            st.table(d[:5])
+            d = list(d['service_name'])
             st.write('Recommended products:')
-            st.table(get_recommendation(9999999,svd))
+            for i in range(len(d)):
+                st.text(d[i])
+            
+            #st.table(get_recommendation(9999999,svd))
 
