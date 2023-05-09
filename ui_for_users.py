@@ -160,12 +160,62 @@ if click:
 
             d = get_recommendation(9999999,svd)
             d = d['service_name']
+            st.table(d)
             d = d[:5]
             d = list(d)
             st.subheader('Recommended products:')
             for i in range(len(d)):
                 st.write(str(i + 1), ". ", d[i])
-                st.caption('Вид обязательственных отношений, договор, согласно')
+                '''
+                if d[i] == 'Saving Account':
+                    st.caption('A saving account is a type of banking product that allows customers to deposit and withdraw funds, while earning interest on their balance. These accounts typically have lower interest rates compared to other investment options, but they also offer more liquidity and flexibility. Saving accounts can be opened by individuals, as well as joint accounts for couples, families, or businesses. Some saving accounts may require a minimum deposit to open, and may have minimum balance requirements to avoid fees. Overall, saving accounts are a popular and convenient option for customers looking to earn some interest on their savings while still maintaining easy access to their funds.')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                if d[i] == 'Saving Account':
+                    st.caption('Вид обязательственных отношений, договор, согласно')
+                '''
                     
             #st.table(get_recommendation(9999999,svd))
 
