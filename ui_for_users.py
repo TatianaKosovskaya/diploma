@@ -71,7 +71,7 @@ data.loc[-1] = ['9999999', id, '9999999', '9999999', '9999999', '9999999', '9999
 data.index = data.index + 1 
 data = data.sort_index()
 
-st.table(data.tail())
+st.table(data.head())
 
 '''
 #data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10], axis=0, ignore_index=True)
