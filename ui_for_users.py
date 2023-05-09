@@ -166,7 +166,14 @@ if click:
             for i in range(len(d)):
                 st.write(str(i + 1), ". ", d[i])
                 if d[i] == 'Loans':
-                    st.markdown('''####Вид обязательственных отношений, договор, согласно''')
-            
+                    st.markdown("""
+                    <style>
+                    .small-font {
+                        font-size:10px !important;
+                    }
+                    </style>
+                    """, unsafe_allow_html=True)
+
+                    st.markdown('<p class="small-font">Вид обязательственных отношений, договор, согласно</p>', unsafe_allow_html=True)
             #st.table(get_recommendation(9999999,svd))
 
