@@ -51,8 +51,8 @@ data=data_1
 col1, col2 = st.columns(2)
 
 product_list = list(data.columns)
+id = 999999.int()
 product_list = product_list[25:]
-st.table(product_list)
 
 with col1:
     arr1 = [ (1 if (st.radio(str(product_list[i]), ['Not Owns', 'Owns'], horizontal=True, index=0)) == 'Owns' else 0) for i in range(0,12)]
@@ -61,7 +61,7 @@ with col1:
 with col2:
     arr2 = [ (1 if (st.radio(str(product_list[i]), ['Not Owns', 'Owns'], horizontal=True, index=0)) == 'Owns' else 0) for i in range(12,24)]
 
-
+st.table(product_list)
 click = st.button('Get Recommendations')
 
 '''
