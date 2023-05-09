@@ -160,7 +160,7 @@ if click:
 
             d = get_recommendation(9999999,svd)
             d = d['service_name']
-            d = d[0:]
+            d = d[:5]
             d = list(d)
             st.write('Recommended products:')
             for i in range(len(d)):
