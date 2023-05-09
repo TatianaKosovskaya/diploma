@@ -42,6 +42,7 @@ data_1 = pd.read_csv('train_df_1.csv')
 
 st.text('Hi 2!')
 
+data=data_1
 
 #data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10], axis=0, ignore_index=True)
 
