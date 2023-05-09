@@ -165,7 +165,7 @@ if click:
             st.write('Recommended products:')
             for i in range(len(d)):
                 st.write(str(i + 1), ". ", d[i])
-                st.markdown(":grey[Вид обязательственных отношений, договор, согласно]")
+                st.caption('Вид обязательственных отношений, договор, согласно')
                     
             #st.table(get_recommendation(9999999,svd))
 
