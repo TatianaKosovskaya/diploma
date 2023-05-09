@@ -61,7 +61,8 @@ with col1:
 with col2:
     arr2 = [ (1 if (st.radio(str(product_list[i]), ['Not Owns', 'Owns'], horizontal=True, index=0)) == 'Owns' else 0) for i in range(12,24)]
 
-st.table(product_list)
+st.table(arr1)
+st.table(arr2)
 click = st.button('Get Recommendations')
 
 '''
