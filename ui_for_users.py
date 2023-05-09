@@ -47,6 +47,7 @@ data_1 = pd.read_csv('train_df_1.csv')
 #data_10 = pd.read_csv('train_df_10.csv')
 
 data=data_1
+data.drop('Unnamed: 0', axis= 1 , inplace= True )
 
 col1, col2 = st.columns(2)
 
@@ -77,7 +78,6 @@ st.text(len(list(data.columns)))
 '''
 #data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10], axis=0, ignore_index=True)
 
-data.drop('Unnamed: 0', axis= 1 , inplace= True )
 data.rename( columns={'Derivada account':'Derivative account'}, inplace=True )
 l = list(data.columns)
 data_desc = pd.read_csv('data_desc.csv')
