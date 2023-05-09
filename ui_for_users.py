@@ -51,7 +51,7 @@ data=data_1
 col1, col2 = st.columns(2)
 
 product_list = list(data.columns)
-
+st.table(product_list)
 
 with col1:
     arr1 = [ (1 if (st.radio(str(product_list[i]), ['Not Owns', 'Owns'], horizontal=True, index=0)) == 'Owns' else 0) for i in range(0,12)]
@@ -63,6 +63,7 @@ with col2:
 
 click = st.button('Get Recommendations')
 
+'''
 #data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10], axis=0, ignore_index=True)
 
 data.drop('Unnamed: 0', axis= 1 , inplace= True )
@@ -144,4 +145,4 @@ def get_recommendation(uid,model):
     return recommendations
 
 st.table(get_recommendation(15890,svd))
-
+'''
