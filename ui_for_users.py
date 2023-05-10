@@ -43,10 +43,10 @@ data_5 = pd.read_csv('train_df_5.csv')
 data_6 = pd.read_csv('train_df_6.csv')
 data_7 = pd.read_csv('train_df_7.csv')
 data_8 = pd.read_csv('train_df_8.csv')
-data_9 = pd.read_csv('train_df_9.csv')
+#data_9 = pd.read_csv('train_df_9.csv')
 #data_10 = pd.read_csv('train_df_10.csv')
 #data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9, data_10], axis=0, ignore_index=True)
-data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9], axis=0, ignore_index=True)
+data = pd.concat([data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8], axis=0, ignore_index=True)
 
 #data=data_1
 data.drop('Unnamed: 0', axis= 1 , inplace= True )
