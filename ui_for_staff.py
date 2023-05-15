@@ -38,6 +38,9 @@ from surprise.prediction_algorithms.knns import KNNBasic
 yes = st.checkbox('Yes')
 no = st.checkbox('No')
 
+if yes and no:
+    st.warning('Choose only one option.', icon="⚠️")
+
 if yes:
 
     data_1 = pd.read_csv('train_df_1.csv')
