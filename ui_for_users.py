@@ -83,7 +83,7 @@ if click:
 
             st.warning('You must select at least one product to receive recommendations.', icon="⚠️")
         
-        else:
+        if (sum(arr1 + arr2) > 0) and (sum(arr1 + arr2) != len(product_list)):
             with st.spinner('Due to the calculation of the machine learning model you have to wait a few seconds for the result.'):
                 data.rename( columns={'Derivada account':'Derivative account'}, inplace=True )
                 l = list(data.columns)
