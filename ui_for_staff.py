@@ -53,7 +53,7 @@ data.drop('Unnamed: 0', axis= 1 , inplace= True )
 
 type_of_rs = st.sidebar.selectbox(
     'Select the type of recommender system',
-    ('---select the type of recommender system---', 'Collaborative Filtering', 'Collaborative Filtering with Memory Limit', 
+    ('---select the type---', 'Collaborative Filtering', 'Collaborative Filtering with Memory Limit', 
      'Collaborative Filtering Based on Item Memory')
 )
 
@@ -87,7 +87,7 @@ if click:
 
         if sum(arr1 + arr2) == len(product_list):
 
-            st.success('You already have all the products.')
+            st.success('The client has all possible products.')
         
         else:
             with st.spinner('Due to the calculation of the machine learning model you have to wait a few seconds for the result.'):
@@ -234,7 +234,7 @@ if click:
 
         if sum(arr1 + arr2) == len(product_list):
 
-            st.success('You already have all the products.')
+            st.success('The client has all possible products.')
         
         if sum(arr1 + arr2) >= 3:
             st.warning('You have selected more than two products. Remove checkmarks from excess products to see the result of the recommender system.')
@@ -430,7 +430,7 @@ if click:
 
         if sum(arr1 + arr2) == len(product_list):
 
-            st.success('You already have all the products.')
+            st.success('The client has all possible products.')
         
         else:
             with st.spinner('Due to the calculation of the machine learning model you have to wait a few seconds for the result.'):
