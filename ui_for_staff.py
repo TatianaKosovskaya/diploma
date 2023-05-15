@@ -236,7 +236,7 @@ if click:
 
             st.success('The client has all possible products.')
         
-        if sum(arr1 + arr2) >= 3:
+        if (sum(arr1 + arr2) >= 3) and (sum(arr1 + arr2) != len(product_list)):
             st.warning('You have selected more than two products. Remove checkmarks from excess products to see the result of the recommender system.')
             
         else:
