@@ -83,6 +83,10 @@ data.index = data.index + 1
 data = data.sort_index()
 
 if click:
+    if type_of_rs == '---select the type---':
+        st.warning('Select a model type to get recommendations.', icon="⚠️")
+
+if click:
     if type_of_rs == 'Collaborative Filtering':
 
         if sum(arr1 + arr2) == len(product_list):
