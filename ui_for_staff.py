@@ -9,7 +9,7 @@ with header:
     Below is a possible user interface for bank staff recommending new banking products based on collaborative filtering.
                     ''')
 
-    #st.write("**Please select the type of recommender system.**")
+    st.write("**Need a recommendation for a new client?**")
 
 import pandas as pd
 import numpy as np
