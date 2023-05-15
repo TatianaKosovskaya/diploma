@@ -659,7 +659,7 @@ if yes and not no:
                             st.caption('A payroll service is a banking product that allows employers to process payroll for their employees efficiently. With this service, employers can pay their employees via direct deposit, make payments to the government for payroll taxes, and generate payroll reports. The service is often integrated with accounting software, which simplifies the process of keeping track of payroll expenses and generating financial statements. Payroll services can be used by businesses of all sizes, and they are especially useful for small and medium-sized enterprises that may not have dedicated human resources or accounting departments.')
 
 if no and not yes:
-    number_id = st.number_input('Write customer id')
+    number_id = st.number_input('Write customer id', min_value=0, max_value=10000000, value=0)
     data_1 = pd.read_csv('train_df_1.csv')
     data_2 = pd.read_csv('train_df_2.csv')
     #data_3 = pd.read_csv('train_df_3.csv')
