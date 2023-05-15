@@ -237,7 +237,6 @@ if click and type_of_rs == 'Collaborative Filtering with Memory Limit':
         st.success('You already have all the products.')
             
     with st.spinner('Due to the calculation of the machine learning model you have to wait a few seconds for the result.'):
-        
         else:
             data.rename( columns={'Derivada account':'Derivative account'}, inplace=True )
             l = list(data.columns)
