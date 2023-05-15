@@ -232,8 +232,7 @@ if click:
 if click:
     if type_of_rs == 'Collaborative Filtering with Memory Limit':
 
-        if sum(arr1 + arr2) == len(product_list):
-
+        if (sum(arr1 + arr2) >= 3) and (sum(arr1 + arr2) == len(product_list)):
             st.success('The client has all possible products.')
         
         if (sum(arr1 + arr2) >= 3) and (sum(arr1 + arr2) != len(product_list)):
