@@ -41,7 +41,7 @@ no = st.checkbox('No')
 if yes and no:
     st.warning('Choose only one option.', icon="⚠️")
 
-if yes:
+if yes and not no:
 
     data_1 = pd.read_csv('train_df_1.csv')
     data_2 = pd.read_csv('train_df_2.csv')
