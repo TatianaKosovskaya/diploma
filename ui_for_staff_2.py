@@ -51,7 +51,7 @@ data = pd.concat([data_1, data_2], axis=0, ignore_index=True)
 #data=data_1
 data.drop('Unnamed: 0', axis= 1 , inplace= True )
 
-tab1, tab2, tab3 = st.tabs(["1️⃣ Collaborative Filtering   ", "2️⃣ Collaborative Filtering with Memory Limit   ", "3️⃣ Collaborative Filtering Based on Item Memory   "])
+tab1, tab2, tab3 = st.tabs(["1️⃣ Collaborative Filtering", "2️⃣ Collaborative Filtering with Memory Limit", "3️⃣ Collaborative Filtering Based on Item Memory"])
 
 with tab1:
     
