@@ -658,7 +658,7 @@ if yes and not no:
                         if d[i] == 'Payroll':
                             st.caption('A payroll service is a banking product that allows employers to process payroll for their employees efficiently. With this service, employers can pay their employees via direct deposit, make payments to the government for payroll taxes, and generate payroll reports. The service is often integrated with accounting software, which simplifies the process of keeping track of payroll expenses and generating financial statements. Payroll services can be used by businesses of all sizes, and they are especially useful for small and medium-sized enterprises that may not have dedicated human resources or accounting departments.')
 
-if no:
+if no and not yes:
     number_id = st.number_input('Write customer id')
                 
                 
