@@ -59,8 +59,8 @@ if yes and not no:
     #data=data_1
     data.drop('Unnamed: 0', axis= 1 , inplace= True )
     st.write("**Need to fill in all user data?**")
-    full = st.checkbox('Yes')
-    not_full = st.checkbox('No')
+    full = st.checkbox('Fill in completely')
+    not_full = st.checkbox('Fill in not completely')
     if full:
         id = st.number_input('Write Customer ID', min_value=0, max_value=10000000, value=0)
         date = st.text_input('Write Date')
