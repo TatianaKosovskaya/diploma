@@ -110,7 +110,7 @@ if yes and not no:
     #st.table(arr2)
     click = st.button('Get Recommendations')
     if full:
-        data.loc[-1] = [date, id, e_i, c_r, sex, age, f_date, index, s, r_index, nan, c_t, c_r_t, r_i, f_i, nan, c_i, d_i, 1, p_c, p_n, a_i, income, s_i] + arr1 + arr2
+        data.loc[-1] = [date, id, e_i, c_r, sex, age, f_date, index, s, r_index, 'nan', c_t, c_r_t, r_i, f_i, 'nan', c_i, d_i, 1, p_c, p_n, a_i, income, s_i] + arr1 + arr2
     if not_full:
         data.loc[-1] = ['9999999', id, '9999999', '9999999', '9999999', '9999999', '9999999', 9999999, '9999999', 9999999, '9999999', '9999999', '9999999', '9999999', 
                         '9999999', '9999999', '9999999', '9999999', 9999999, 9999999, '9999999', 9999999, 9999999, '9999999'] + arr1 + arr2
