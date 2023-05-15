@@ -229,16 +229,14 @@ if click and type_of_rs == 'Collaborative Filtering':
             #st.table(get_recommendation(9999999,svd))
 
 if click and type_of_rs == 'Collaborative Filtering with Memory Limit':
-    
+            
+    if sum(arr1 + arr2) >= 3:
+        st.warning('You have selected more than two products. Remove checkmarks from excess products to see the result of the recommender system.')
+
+    if sum(arr1 + arr2) == len(product_list):
+        st.success('You already have all the products.')
+            
     with st.spinner('Due to the calculation of the machine learning model you have to wait a few seconds for the result.'):
-        
-        if sum(arr1 + arr2) >= 3:
-
-            st.success('You have selected more than two products. Remove checkmarks from excess products to see the result of the recommender system.')
-
-        if sum(arr1 + arr2) == len(product_list):
-
-            st.success('You already have all the products.')
         
         else:
             data.rename( columns={'Derivada account':'Derivative account'}, inplace=True )
