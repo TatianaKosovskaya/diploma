@@ -51,7 +51,7 @@ data = pd.concat([data_1, data_2], axis=0, ignore_index=True)
 #data=data_1
 data.drop('Unnamed: 0', axis= 1 , inplace= True )
 
-type_of_rs = st.bar.selectbox(
+type_of_rs = st.sidebar.selectbox(
     'Select the type of recommender system',
     ('---select the type---', 'Collaborative Filtering', 'Collaborative Filtering with Memory Limit', 
      'Collaborative Filtering Based on Item Memory')
