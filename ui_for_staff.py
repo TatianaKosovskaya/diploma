@@ -58,6 +58,31 @@ if yes and not no:
 
     #data=data_1
     data.drop('Unnamed: 0', axis= 1 , inplace= True )
+    st.write("**Need to fill in all user data?**")
+    full = st.checkbox('Yes')
+    not_full = st.checkbox('No')
+    if full:
+        id = st.number_input('Write Customer ID', min_value=0, max_value=10000000, value=0)
+        date = st.text_input('Write Date')
+        e_i = st.text_input('Write Employee index')
+        c_r = st.text_input('Write Country residence')
+        sex = st.text_input('Write Sex')
+        age = st.text_input('Write Age')
+        f_date = st.text_input('First date')
+        index = st.number_input('Write Index', min_value=0, max_value=1, value=0)
+        s = st.text_input('Write Seniority (in months)')
+        r_index = st.number_input('Write Index Real', min_value=0, max_value=99, value=0)
+        c_t = st.text_input('Customer type')
+        c_r_t = st.text_input('Write Customer relation type')
+        r_i = st.text_input('Write Residence index')
+        f_i = st.text_input('Write Foreigner index')
+        c_i = st.text_input('Write Channel index')
+        d_i = st.text_input('Write Deceased index')
+        p_c = st.number_input('Write Province code', min_value=1, max_value=52, value=1)
+        p_n = st.text_input('Write Province name')
+        a_i = st.number_input('Write Activity index', min_value=0, max_value=1, value=0)
+        income = st.number_input('Write Gross income of the household', min_value=0, max_value=100000000, value=0)
+        s_i = st.text_input('Write Segmentation index')
 
     type_of_rs = st.selectbox(
         'Select the type of recommender system',
@@ -71,7 +96,7 @@ if yes and not no:
     col1, col2 = st.columns(2)
 
     product_list = list(data.columns)
-    id = 9999999
+    #id = 9999999
     product_list = product_list[24:]
 
     with col1:
@@ -84,9 +109,11 @@ if yes and not no:
     #st.table(arr1)
     #st.table(arr2)
     click = st.button('Get Recommendations')
-
-    data.loc[-1] = ['9999999', id, '9999999', '9999999', '9999999', '9999999', '9999999', 9999999, '9999999', 9999999, '9999999', '9999999', '9999999', '9999999', '9999999', 
-                    '9999999', '9999999', '9999999', 9999999, 9999999, '9999999', 9999999, 9999999, '9999999'] + arr1 + arr2
+    if full:
+        data.loc[-1] = [date, id, e_i, c_r, sex, age, f_date, index, s, r_index, nan, c_t, c_r_t, r_i, f_i, nan, c_i, d_i, 1, p_c, p_n, a_i, income, s_i] + arr1 + arr2
+    if not_full:
+        data.loc[-1] = ['9999999', id, '9999999', '9999999', '9999999', '9999999', '9999999', 9999999, '9999999', 9999999, '9999999', '9999999', '9999999', '9999999', 
+                        '9999999', '9999999', '9999999', '9999999', 9999999, 9999999, '9999999', 9999999, 9999999, '9999999'] + arr1 + arr2
     data.index = data.index + 1 
     data = data.sort_index()
 
@@ -658,6 +685,21 @@ if yes and not no:
                         if d[i] == 'Payroll':
                             st.caption('A payroll service is a banking product that allows employers to process payroll for their employees efficiently. With this service, employers can pay their employees via direct deposit, make payments to the government for payroll taxes, and generate payroll reports. The service is often integrated with accounting software, which simplifies the process of keeping track of payroll expenses and generating financial statements. Payroll services can be used by businesses of all sizes, and they are especially useful for small and medium-sized enterprises that may not have dedicated human resources or accounting departments.')
 
+    if full:
+        @st.cache
+        def convert_df(data):
+            # IMPORTANT: Cache the conversion to prevent computation on every rerun
+            return data.to_csv().encode('utf-8')
+
+        csv = convert_df(data)
+
+        st.download_button(
+            label="Download data as CSV",
+            data=csv,
+            file_name='new_data.csv',
+            mime='text/csv',
+        )
+                            
 if no and not yes:
     number_id = st.number_input('Write customer id', min_value=0, max_value=10000000, value=0)
     data_1 = pd.read_csv('train_df_1.csv')
