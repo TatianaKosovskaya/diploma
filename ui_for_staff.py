@@ -35,11 +35,10 @@ from surprise.model_selection import cross_validate
 from surprise import accuracy
 from surprise.prediction_algorithms.knns import KNNBasic
 
-yn = st.radio(
-    "Need a recommendation for a new client?",
-    ('Yes', 'No'))
+yes = st.checkbox('Yes')
+no = st.checkbox('No')
 
-if yn == 'Yes':
+if yes:
 
     data_1 = pd.read_csv('train_df_1.csv')
     data_2 = pd.read_csv('train_df_2.csv')
@@ -656,7 +655,7 @@ if yn == 'Yes':
                         if d[i] == 'Payroll':
                             st.caption('A payroll service is a banking product that allows employers to process payroll for their employees efficiently. With this service, employers can pay their employees via direct deposit, make payments to the government for payroll taxes, and generate payroll reports. The service is often integrated with accounting software, which simplifies the process of keeping track of payroll expenses and generating financial statements. Payroll services can be used by businesses of all sizes, and they are especially useful for small and medium-sized enterprises that may not have dedicated human resources or accounting departments.')
 
-if yn == 'No':
+if no:
     number_id = st.number_input('Write customer id')
                 
                 
