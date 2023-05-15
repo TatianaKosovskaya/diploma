@@ -59,7 +59,7 @@ if yes and not no:
     #data=data_1
     data.drop('Unnamed: 0', axis= 1 , inplace= True )
 
-    type_of_rs = st.sidebar.selectbox(
+    type_of_rs = st.selectbox(
         'Select the type of recommender system',
         ('---select the type---', 'Collaborative Filtering', 'Collaborative Filtering with Memory Limit', 
          'Collaborative Filtering Based on Item Memory')
@@ -676,7 +676,7 @@ if no and not yes:
     #data=data_1
     data.drop('Unnamed: 0', axis= 1 , inplace= True )
 
-    type_of_rs = st.sidebar.selectbox(
+    type_of_rs = st.selectbox(
         'Select the type of recommender system',
         ('---select the type---', 'Collaborative Filtering', 'Collaborative Filtering with Memory Limit', 
          'Collaborative Filtering Based on Item Memory')
