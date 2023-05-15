@@ -78,6 +78,10 @@ if click:
         if sum(arr1 + arr2) == len(product_list):
 
             st.success('You already have all the products.')
+            
+        if sum(arr1 + arr2) == 0:
+
+            st.warning('You must select at least one product to receive recommendations.', icon="⚠️")
         
         else:
             with st.spinner('Due to the calculation of the machine learning model you have to wait a few seconds for the result.'):
